@@ -1,7 +1,9 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
+
+import userRoutes from './routes/User.js';
 
 
 // mongo db connection
@@ -27,6 +29,8 @@ app.use(cors("*"));
 
 
 // routes
+
+app.use('/user', userRoutes);
 
 
 
